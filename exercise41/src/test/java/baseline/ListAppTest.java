@@ -17,7 +17,7 @@ class ListAppTest {
     @Test
     void readInput() throws FileNotFoundException {
         ListApp test = new ListApp();
-        List<String> testList = test.readInput("data/input.txt");
+        List<String> testList = test.readInput("data/exercise41_input.txt");
         String expected = "[Ling, Mai, Johnson, Jim, Zarnecki, Sabrina, Jones, Chris, Jones, Aaron, Swift, Geoffrey, Xiong, Fong]";
         assertEquals(expected, testList.toString());
     }
@@ -25,7 +25,7 @@ class ListAppTest {
     @Test
     void sortList() throws FileNotFoundException {
         ListApp test = new ListApp();
-        List<String> testList = test.readInput("data/input.txt");
+        List<String> testList = test.readInput("data/exercise41_input.txt");
         List<String> actual = test.sortList(testList);
         String expected = "[Johnson, Jim, Jones, Aaron, Jones, Chris, Ling, Mai, Swift, Geoffrey, Xiong, Fong, Zarnecki, Sabrina]";
         assertEquals(expected, actual.toString());
@@ -34,8 +34,8 @@ class ListAppTest {
     @Test
     void printList() throws IOException {
         ListApp test = new ListApp();
-        List<String> testList = test.readInput("data/input.txt");
-        test.printList(testList, "data/output.txt");
+        List<String> testList = test.readInput("data/exercise41_input.txt");
+        test.printList(testList, "data/outputTest.txt");
         List<String> actual = test.readInput("data/outputTest.txt");
         String expected = "[Total of 7 names, -----------------, Ling, Mai, Johnson, Jim, Zarnecki, Sabrina, Jones, Chris, Jones, Aaron, Swift, Geoffrey, Xiong, Fong]";
         assertEquals(expected, actual.toString());

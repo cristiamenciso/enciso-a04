@@ -12,11 +12,11 @@ public class Solution41 {
     public static void main(String[] args) throws IOException {
         ListApp test = new ListApp();
         // Call to read input from input file
-        List<String> list = test.readInput("data/input.txt");
+        List<String> list = test.readInput("data/exercise41_input.txt");
         // sort list
         List<String> sortedList = test.sortList(list);
         // write to output file
-        test.printList(sortedList, "data/output.txt");
+        test.printList(sortedList, "data/exercise41_output.txt");
 }
     }
 
