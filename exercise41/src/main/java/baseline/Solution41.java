@@ -5,9 +5,20 @@ package baseline;
  *  Copyright 2021 Cristiam Enciso
  */
 
+import java.io.IOException;
+import java.util.List;
+
 public class Solution41 {
-    // Call to read input from input file
-    // inititate arrayList to hold names
-    // sort list
-    // write to output file
+    public static void main(String[] args) throws IOException {
+        ListApp test = new ListApp();
+        // Call to read input from input file
+        List<String> list = test.readInput("data/input.txt");
+        // sort list
+        List<String> sortedList = test.sortList(list);
+        // write to output file
+        test.printList(sortedList, "data/output.txt");
 }
+    }
+
+
+
