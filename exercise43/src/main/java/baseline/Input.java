@@ -4,6 +4,8 @@ package baseline;
  *  Copyright 2021 Cristiam Enciso
  */
 
+import java.util.Scanner;
+
 public class Input {
     // make private variables
     private String siteName;
@@ -31,32 +33,33 @@ public class Input {
         return author;
     }
 
-    public void setJs(String js) {
+    public void setJS(String js) {
         this.js = js;
     }
 
-    public String getJs() {
+    public String getJS() {
         return js;
     }
 
-    public void setCss(String css) {
+    public void setCSS(String css) {
         this.css = css;
     }
 
-    public String getCss() {
+    public String getCSS() {
         return css;
-    }
-
-    public void setPath(String path) {
-        this.path = path;
-    }
-
-    public String getPath() {
-        return path;
     }
 
     // method to get input
     public void getInput() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Site name: ");
+        setSiteName(in.nextLine());
+        System.out.print("Author: ");
+        setAuthor(in.nextLine());
+        System.out.print("Do you want a folder for JavaScript? ");
+        setJS(in.nextLine());
+        System.out.print("Do you want a folder for CSS? ");
+        setCSS(in.nextLine());
 
     }
 

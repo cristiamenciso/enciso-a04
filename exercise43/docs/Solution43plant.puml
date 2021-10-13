@@ -11,12 +11,13 @@ class Input {
 -String siteName
 -String author
 -String js
-=String css
+-String css
 -String path;
++void getInput
 }
 class WebBuilder {
--makeFile()
-+makeSite()
+-void makeFile()
++void makeSite()
 }
 
 @enduml
