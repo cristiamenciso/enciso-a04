@@ -1,27 +1,19 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
+Solution46 *-- FrequencyCalculator
 
-class ArrayList {
-Object[] elementData
-size()
+class FrequencyCalculator {
++Map<String, Integer> readFile()
++void computeFrequency()
++Map<String, Integer> sortMap()
++void printGraph
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class Solution46 {
+main()
 }
 
 @enduml
